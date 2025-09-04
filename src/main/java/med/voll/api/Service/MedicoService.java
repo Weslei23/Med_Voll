@@ -12,15 +12,15 @@ public class MedicoService
     @Autowired
     private MedicoRepository medicoRepository;
 
-    public MedicoDTO getMedicoById( Long id )
-    {
-
-    }
-
-    public MedicoDTO criarMedico( MedicoDTO medicoDTO )
-    {
-        MedicoModel medicoModel = medicoRepository.save( medicoDTO );
-
-        return MedicoDTO.f
-    }
+//    public MedicoDTO getMedicoById( Long id )
+//    {
+//
+//    }
+//
+//    public MedicoDTO criarMedico( MedicoDTO medicoDTO )
+//    {
+//        MedicoModel medicoModel = medicoRepository.save( medicoDTO );
+//
+//        return MedicoDTO.f
+//    }
 }

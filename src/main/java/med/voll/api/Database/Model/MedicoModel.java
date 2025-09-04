@@ -2,6 +2,7 @@ package med.voll.api.Database.Model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import med.voll.api.Dto.MedicoDTO;
 
 @Entity
 @Table( name = "tb_medicos" )
@@ -25,4 +26,14 @@ public class MedicoModel
 
     @Embedded
     private EnderecoModel endereco;
+
+    public MedicoModel( MedicoDTO medicoDTO )
+    {
+        this.nome = medicoDTO.nome();
+        this.email = medicoDTO.email();
+        this.telefone = medicoDTO.telefone();
+        this.crm = medicoDTO.crm();
+        this.endereco = new EnderecoModel( medicoDTO.enderecoDTO() );
+        this.especialidade = medicoDTO.especialidade();
+    }
 }
